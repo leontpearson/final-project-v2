@@ -6,7 +6,7 @@ function Games() {
     <div className="games">
       <div className="gamesNav">
         <Link to="/games/search"> Search</Link>
-        <Link to="/games/list"> All Games </Link>
+        <Link to="/games/list"> New Games </Link>
         <Link to="/games/add"> Add Games </Link>
       </div>
 

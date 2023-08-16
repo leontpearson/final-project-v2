@@ -1,12 +1,12 @@
 import React from "react";
 import "./PageNotFound.css";
-//import cryingImage from "./Components/Assets/<image_file_path>";
+import cryingImage from "./Assets/cryingImage.png";
 
 function PageNotFound() {
   return (
     <div className="pnf-container">
       <h1>Uh oh, that page doesn't exist!</h1>
-      {/* <img src={cryingImage} alt="man crying" /> */}
+      <img className="image" src={cryingImage} alt="man crying" />
     </div>
   );
 }
