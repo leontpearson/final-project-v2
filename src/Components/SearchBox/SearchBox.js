@@ -13,11 +13,11 @@ const SearchBox = () => {
 
   const API_BASE_URL = "https://api.rawg.io/api/games?";
 
-  useEffect(() => {
-    if (games.length > 0) {
-      navigate(`/games/results`);
-    }
-  }, [games]);
+  // useEffect(() => {
+  //   if (games.length > 0) {
+  //     navigate(`/games/results`);
+  //   }
+  // }, [games]);
 
   const handleSubmit = (event) => {
     event.preventDefault();
