@@ -1,0 +1,28 @@
+.game-item-container {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  margin: 10px;
+  margin-left: 200px;
+  margin-right: 200px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+.game-name {
+  margin-bottom: 10px;
+}
+
+.game-name h2 {
+  font-size: 18px;
+  color: #333;
+}
+
+.game-image img {
+  width: 500px;
+  object-fit: cover;
+  border-radius: 20px;
+}

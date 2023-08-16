@@ -1,0 +1,9 @@
+.content-container h1 {
+  display: flex;
+  justify-content: center;
+}
+
+.content-container p {
+  display: flex;
+  justify-content: center;
+}

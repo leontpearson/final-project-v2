@@ -1,0 +1,27 @@
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f2f2f2;
+}
+
+.home-container .hero-text {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.home-container .sub-heading {
+  font-size: 1.5rem;
+  margin-bottom: 40px;
+}
+
+.home-container .link {
+  background-color: #1a1a1a;
+  color: #fff;
+  padding: 15px 30px;
+  text-decoration: none;
+  font-size: 1.5rem;
+  border-radius: 5px;
+}
