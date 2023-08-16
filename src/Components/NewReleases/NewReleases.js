@@ -8,7 +8,7 @@ const NewReleases = () => {
   const [newReleaseData, setNewReleaseData] = useState([]);
 
   const getNewReleasesData = () => {
-    fetch(`${API_BASE_URL}?page=1&dates=2023-01-01,2023-07-30&key=${API_KEY}`)
+    fetch(`${API_BASE_URL}?page=1&dates=2023-01-01,2023-08-17&key=${API_KEY}`)
       .then((res) => res.json())
       .then((data) => {
         setNewReleaseData(data.results);

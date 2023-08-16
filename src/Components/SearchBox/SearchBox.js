@@ -1,21 +1,26 @@
-import React, { useState } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import GameItem from "../GameItem/GameItem";
 import "./SearchBox.css";
 
 const API_KEY = process.env.REACT_APP_RAWG_API_KEY;
 
 const SearchBox = () => {
-  const { id } = useParams();
-  // let navigate = useNavigate();
+  // const { id } = useParams();
+  let navigate = useNavigate();
   const [games, setGames] = useState([]);
   const [query, setQuery] = useState("");
 
   const API_BASE_URL = "https://api.rawg.io/api/games?";
 
+  useEffect(() => {
+    if (games.length > 0) {
+      navigate(`/games/results`);
+    }
+  }, [games]);
+
   const handleSubmit = (event) => {
     event.preventDefault();
-    // navigate(`/games/${query}`);
 
     const apiUrl = `${API_BASE_URL}search=${query}&search_exact=true&key=${API_KEY}`;
     console.log("API URL:", apiUrl);

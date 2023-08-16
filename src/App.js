@@ -22,7 +22,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="about" element={<About />} />
         <Route path="games" element={<Games />}>
-          <Route path="search" element={<SearchBox />} />
+          <Route path="search/*" element={<SearchBox />} />
           <Route path="list" element={<NewReleases />} />
           <Route path="add" element={<AddGame />} />
           <Route path=":id" element={<GameItem />} />
