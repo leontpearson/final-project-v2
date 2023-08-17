@@ -2,6 +2,10 @@
 
 .App {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 body {
@@ -61,28 +65,4 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.listOfGames {
-  width: 100%;
-  height: calc(100vh - 80px);
-  display: flex;
-  justify-content: center;
-  padding-top: 60px;
-}
-
-.gamesList {
-  columns: 3 auto;
-  display: inline-block;
-}
-
-.gameDisplay {
-  width: 300px;
-  height: 300px;
-  background-color: rgb(233, 233, 233);
-  cursor: pointer;
-}
-* {
-  padding-top: 0;
-  margin-top: 0;
 }

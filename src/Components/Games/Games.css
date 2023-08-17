@@ -1,0 +1,9 @@
+.games {
+  display: flex;
+  position: fixed;
+}
+
+.gamesNav {
+  display: flex;
+  position: relative;
+}

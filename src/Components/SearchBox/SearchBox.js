@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import GameItem from "../GameItem/GameItem";
 import "./SearchBox.css";
 
 const API_KEY = process.env.REACT_APP_RAWG_API_KEY;
 
 const SearchBox = () => {
-  // const { id } = useParams();
+  const { id } = useParams();
   let navigate = useNavigate();
   const [games, setGames] = useState([]);
   const [query, setQuery] = useState("");
@@ -15,9 +15,9 @@ const SearchBox = () => {
 
   // useEffect(() => {
   //   if (games.length > 0) {
-  //     navigate(`/games/results`);
+  //     navigate(`/games/${id}`);
   //   }
-  // }, [games]);
+  // }, []);
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -30,6 +30,7 @@ const SearchBox = () => {
       .then((data) => {
         setGames(data.results);
         console.log("Fetched Games:", data.results);
+        navigate(`/games/search?query=${query}`);
       });
   };
 
@@ -46,6 +47,7 @@ const SearchBox = () => {
 
         <button type="submit">Search</button>
       </form>
+      <br />
 
       <div className="game-list">
         {games.map((game) => (
