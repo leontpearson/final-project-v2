@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import GameItem from "../GameItem/GameItem";
 import "./SearchBox.css";
@@ -12,12 +12,6 @@ const SearchBox = () => {
   const [query, setQuery] = useState("");
 
   const API_BASE_URL = "https://api.rawg.io/api/games?";
-
-  // useEffect(() => {
-  //   if (games.length > 0) {
-  //     navigate(`/games/${id}`);
-  //   }
-  // }, []);
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -55,6 +49,7 @@ const SearchBox = () => {
             key={game.id}
             name={game.name}
             image={game.background_image}
+            rating={game.rating}
           />
         ))}
       </div>

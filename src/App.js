@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Link, Routes, Route } from "react-router-dom";
 import "./App.css";
+import logo from "./logo.png";
 
 import Home from "./Components/Home/Home";
 import Games from "./Components/Games/Games";
@@ -15,6 +16,9 @@ function App() {
   return (
     <Router>
       <nav>
+        <a href="/">
+          <img src={logo} alt="Logo" />
+        </a>
         <Link to="/"> Home </Link>
         <Link to="games/search"> Games </Link>
         <Link to="about"> About </Link>

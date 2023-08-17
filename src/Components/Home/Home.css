@@ -31,3 +31,8 @@
   border-radius: 5px;
   align-self: center;
 }
+
+.image {
+  /* z-index: -1; */
+  background-size: cover;
+}
