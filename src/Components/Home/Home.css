@@ -10,11 +10,16 @@
 .home-container .hero-text {
   font-size: 3rem;
   margin-bottom: 20px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  margin-left: 20px;
 }
 
 .home-container .sub-heading {
   font-size: 1.5rem;
   margin-bottom: 40px;
+  text-align: center;
 }
 
 .home-container .link {
@@ -24,4 +29,5 @@
   text-decoration: none;
   font-size: 1.5rem;
   border-radius: 5px;
+  align-self: center;
 }
