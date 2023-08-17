@@ -16,7 +16,7 @@ const SearchBox = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    const apiUrl = `${API_BASE_URL}search=${query}&search_exact=true&key=${API_KEY}`;
+    const apiUrl = `${API_BASE_URL}search=${query}&search_precise="true"&key=${API_KEY}`;
     console.log("API URL:", apiUrl);
 
     fetch(apiUrl)
@@ -50,6 +50,7 @@ const SearchBox = () => {
             name={game.name}
             image={game.background_image}
             rating={game.rating}
+            released={new Date(game.released).getFullYear()}
           />
         ))}
       </div>
